@@ -41,13 +41,13 @@ public class CompteDAO extends DAO<Compte>{
 				if(result.getInt("decouvert") > 0)
 				{
 					compte = new CompteAvecDecouvert(
-					Integer.toString(id),
+					id,
 					result.getInt("solde"),
 					result.getInt("decouvert")
 					);
 				}else {
 					compte = new CompteSansDecouvert(
-					Integer.toString(id),
+					id,
 					result.getInt("solde")
 					);
 				}

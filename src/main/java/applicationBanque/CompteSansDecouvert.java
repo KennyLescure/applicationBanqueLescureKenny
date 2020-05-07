@@ -2,15 +2,18 @@ package applicationBanque;
 
 public class CompteSansDecouvert extends Compte{
 	
-	public CompteSansDecouvert(String numeroCompte, double solde) 
+	public CompteSansDecouvert(int numeroCompte, double solde) 
 	{
         super(numeroCompte, solde);
     }
 	
 	
-	void debiter(double montant)
+	public void debiter(double montant)
 	{
-		
+		if(this.solde-montant>=0)
+		{
+			this.solde = this.solde - montant;
+		}
 	}
 
 }

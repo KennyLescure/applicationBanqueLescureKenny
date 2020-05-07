@@ -2,10 +2,10 @@ package applicationBanque;
 
 public abstract class Compte {
 	
-	String numeroCompte;
+	int numeroCompte;
 	double solde;
 	
-	public Compte(String numeroCompte, double solde)
+	public Compte(int numeroCompte, double solde)
 	{
 		this.numeroCompte = numeroCompte;
 		this.solde = solde;
@@ -16,14 +16,12 @@ public abstract class Compte {
 		
 	}
 	
-	void debiter(double montant)
-	{
-		
-	}
+	public abstract void debiter(double montant);
+	
 	
 	void crediter(double montant)
 	{
-		
+		this.solde = this.solde + montant;
 	}
 
 }

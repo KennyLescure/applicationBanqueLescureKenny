@@ -3,15 +3,18 @@ package applicationBanque;
 public class CompteAvecDecouvert extends Compte{
 	private double decouvertAutorise;
 	
-	public CompteAvecDecouvert(String numeroCompte, double solde, double decouvertAutorise) 
+	public CompteAvecDecouvert(int numeroCompte, double solde, double decouvertAutorise) 
 	{
         super(numeroCompte, solde);
         this.decouvertAutorise = decouvertAutorise;
     }
 	
-	void debiter(double montant)
+	public void debiter(double montant)
 	{
-		
+		if (this.solde-montant>=decouvertAutorise)
+		{
+			this.solde = this.solde - montant;
+		}
 	}
 
 }
