@@ -12,7 +12,7 @@ public class CompteTest {
 	Compte comptePauvre = new CompteSansDecouvert(17, 10);
 	
 	@Test
-    public void testCreateNotNull() {
+    public void testCompteCree() {
         Assert.assertNotNull(compteAvecDecouvert);
         Assert.assertNotNull(compteSansDecouvert);
     }
