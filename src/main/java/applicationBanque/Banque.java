@@ -33,13 +33,13 @@ public class Banque {
 	}
 	
 	//de euro a dollars US
-	double conversionFromEuro(double montant)
+	public static double conversionFromEuro(double montant)
 	{
 		return montant*1.08;
 	}
 	
 	//de dollars US a euro
-	double conversionToEuro(double montant)
+	public static double conversionToEuro(double montant)
 	{
 		return montant*0.93;
 	}
